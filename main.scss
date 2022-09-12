@@ -1,6 +1,233 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border-radius: 2px;
-} 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+body {
+    width: 95%;
+  font-family: "Lato", sans-serif;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-align: center;
+  background: rgb(245, 243, 243);
+  margin: 1rem;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 1rem;
+  z-index: 2;
+  background: white;
+  border-bottom: 2px solid whitesmoke;
+  box-shadow: 2px 2px 5px darkgray;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: lighten($color: #000000, $amount: 35%);
+
+      h1 {
+        color: rgb(244, 78, 60);
+      }
+    }
+    .logo {
+      text-decoration: none;
+    }
+  }
+}
+
+.search_box {
+    display: none;
+    margin-top: 70px;
+
+    input {
+        width: 80%;
+        padding: 0.5rem;
+        border: 1px solid grey;
+        border-radius: 4px;
+    }
+
+    button {
+        cursor: pointer;
+        background: #f44e3c;
+        padding: 0.5rem;
+        border-radius: 8px;
+        border: 1px solid #f44e3c;
+    }
+}
+
+.menu_options {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: white;
+  overflow: hidden;;
+
+  i {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    color: lighten($color: #000000, $amount: 25%);
+    z-index: 30;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2rem;
+    margin-top: 2.5rem;
+
+    li {
+    list-style-type: none;
+    margin: 0.5rem 0;
+
+    a {
+      text-decoration: none;
+      color: lighten($color: #000000, $amount: 25%);
+
+      &:hover{
+        text-decoration: underline;
+    }
+  }
+  }
+  }
+
+  
+}
+
+.welcome_header {
+  margin: 6rem 1rem 0;
+  h2 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  p {
+    font-weight: 400;
+  }
+}
+
+.all_courses {
+  margin: 3rem 1rem;
+  padding: 1rem;
+  text-transform: capitalize;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .underline {
+    width: 80px;
+    height: 5px;
+    background: #f44e3c;
+    margin: 0.4rem 0 2rem;
+  }
+
+  .course_card {
+    margin: 0.5rem;
+    padding: 1rem;
+    background: darken($color: #fff, $amount: 8%);
+    border: 1px solid darken($color: #fff, $amount: 10%);
+    // box-shadow: 1.1px 1px 1px lighten($color: #000000, $amount: 10%);
+    position: relative;
+
+    h4 {
+      margin-top: 0.5rem;
+    }
+
+    .price {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        padding: 0.1rem;
+        background: white;
+        color: black;
+        border: 2px solid white;
+    }
+  }
+}
+
+.course_card:hover {
+  border: 2px solid lighten($color: #000000, $amount: 50%);
+  transform: scale(1.05);
+  transition: all 1s ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+.featured_topics {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+
+    .underline {
+      width: 80px;
+      height: 3px;
+      background: rgb(244, 78, 60);
+      margin: 0.4rem 0 2rem;
+    }
+  }
+
+  .feature_articles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    grid-gap: 2rem 3rem;
+    margin-bottom: 2rem;
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    div {
+        margin: 0.5rem;
+    }
+  }
+}
+
+.visible {
+    display: block;
+    z-index: 5;
+}
+
+footer {
+  .footer_lists {
+    padding: 1rem;
+    border-top: 1px solid lighten($color: black, $amount: 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footer_list {
+      list-style-type: none;
+    }
+
+    a {
+      color: lighten($color: #000000, $amount: 35%);
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+  }
+
+  p {
+    margin-top: -15px;
+  }
+}
