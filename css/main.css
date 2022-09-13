@@ -122,7 +122,7 @@ body {
 }
 .all_courses .underline {
   width: 80px;
-  height: 5px;
+  height: 2px;
   background: #f44e3c;
   margin: 0.4rem 0 2rem;
 }
@@ -153,17 +153,54 @@ body {
   cursor: pointer;
 }
 
-.featured_topics header {
+.instructor_section .instructor_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.instructor_section .instructor_header .underline {
+  width: 80px;
+  height: 1px;
+  background: #f44e3c;
+  margin: 0.4rem 0 2rem;
+}
+.instructor_section .instructor {
+  letter-spacing: 0;
+  text-align: start;
+  margin: 2rem 0;
+  height: 200px;
+}
+.instructor_section .instructor_image {
+  float: left;
+  margin-right: 1.5rem;
+  clear: both;
+  margin-top: 0.65rem;
+}
+.instructor_section .colored_paragraph {
+  color: #f44e3c;
+}
+.instructor_section hr {
+  margin: 0.6rem 0;
+}
+.instructor_section .more {
+  border: 1px solid #f44e3c;
+  margin-bottom: 4rem;
+}
+.instructor_section .more .fa {
+  color: #f44e3c;
+}
+
+.featured_topics .featured_topics_header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
 }
-.featured_topics header .underline {
+.featured_topics .featured_topics_header .featured_underline {
   width: 80px;
   height: 3px;
-  background: rgb(244, 78, 60);
-  margin: 0.4rem 0 2rem;
+  background: #ec5242;
+  margin: 0.4rem 0 1.5rem;
 }
 .featured_topics .feature_articles {
   display: grid;
@@ -179,12 +216,63 @@ body {
   margin: 0.5rem;
 }
 
+.main_about .about_section {
+  margin: 5rem 0 2rem;
+  color: #f44e3c;
+}
+.main_about .vision_header {
+  color: #f44e3c;
+  margin: 1rem;
+}
+.main_about .vision_article {
+  text-align: start;
+}
+.main_about .vision_lists {
+  margin: 1rem 0;
+}
+.main_about .vision_lists .vision_list {
+  margin-left: 3rem;
+}
+.main_about .our_story_header {
+  color: #f44e3c;
+  margin: 2rem 0 0.8rem;
+}
+.main_about .our_story_article {
+  text-align: start;
+}
+.main_about .founder_image {
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .visible {
   display: block;
   z-index: 5;
 }
 
+footer .partnership {
+  background: #4d4d4d;
+  color: #fff;
+  padding: 1rem;
+}
+footer .partnership_heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+footer .partnership_heading .partnership_underline {
+  width: 60px;
+  height: 1px;
+  background: rgb(244, 78, 60);
+  margin: 0.4rem 0 1.5rem;
+}
+footer .partnership_img {
+  display: inline-block;
+  margin: 0 0.2rem;
+}
 footer .footer_lists {
+  margin-top: 2rem;
   padding: 1rem;
   border-top: 1px solid gray;
   display: flex;
@@ -194,11 +282,11 @@ footer .footer_lists {
 footer .footer_lists .footer_list {
   list-style-type: none;
 }
-footer .footer_lists a {
+footer .footer_lists .footer_list_a {
   color: #595959;
   display: inline-block;
   margin: 0 0.5rem;
 }
-footer p {
+footer .footer_paragraph {
   margin-top: -15px;
 }/*# sourceMappingURL=main.css.map */

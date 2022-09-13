@@ -1,3 +1,7 @@
+$orange-color: #ec5242;
+$black-color: #272a31;
+$gray-color: #d3d3d3;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +10,7 @@
 }
 
 body {
-    width: 95%;
+  width: 95%;
   font-family: "Lato", sans-serif;
   line-height: 24px;
   letter-spacing: 1px;
@@ -35,12 +39,13 @@ body {
     align-items: center;
 
     a {
-      color: lighten($color: #000000, $amount: 35%);
+      color: lighten($color: #000, $amount: 35%);
 
       h1 {
         color: rgb(244, 78, 60);
       }
     }
+
     .logo {
       text-decoration: none;
     }
@@ -48,23 +53,23 @@ body {
 }
 
 .search_box {
-    display: none;
-    margin-top: 70px;
+  display: none;
+  margin-top: 70px;
 
-    input {
-        width: 80%;
-        padding: 0.5rem;
-        border: 1px solid grey;
-        border-radius: 4px;
-    }
+  input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid grey;
+    border-radius: 4px;
+  }
 
-    button {
-        cursor: pointer;
-        background: #f44e3c;
-        padding: 0.5rem;
-        border-radius: 8px;
-        border: 1px solid #f44e3c;
-    }
+  button {
+    cursor: pointer;
+    background: #f44e3c;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #f44e3c;
+  }
 }
 
 .menu_options {
@@ -76,13 +81,13 @@ body {
   top: 0;
   left: 0;
   background: white;
-  overflow: hidden;;
+  overflow: hidden;
 
   i {
     position: fixed;
     top: 10px;
     right: 20px;
-    color: lighten($color: #000000, $amount: 25%);
+    color: lighten($color: #000, $amount: 25%);
     z-index: 30;
   }
 
@@ -94,29 +99,29 @@ body {
     margin-top: 2.5rem;
 
     li {
-    list-style-type: none;
-    margin: 0.5rem 0;
+      list-style-type: none;
+      margin: 0.5rem 0;
 
-    a {
-      text-decoration: none;
-      color: lighten($color: #000000, $amount: 25%);
+      a {
+        text-decoration: none;
+        color: lighten($color: #000, $amount: 25%);
 
-      &:hover{
-        text-decoration: underline;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
-  }
-  }
-
-  
 }
 
 .welcome_header {
   margin: 6rem 1rem 0;
+
   h2 {
     font-size: 1.5rem;
     margin: 1rem 0;
   }
+
   p {
     font-weight: 400;
   }
@@ -135,7 +140,7 @@ body {
 
   .underline {
     width: 80px;
-    height: 5px;
+    height: 2px;
     background: #f44e3c;
     margin: 0.4rem 0 2rem;
   }
@@ -153,36 +158,82 @@ body {
     }
 
     .price {
-        position: absolute;
-        top: 20px;
-        right: 25px;
-        padding: 0.1rem;
-        background: white;
-        color: black;
-        border: 2px solid white;
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      padding: 0.1rem;
+      background: white;
+      color: black;
+      border: 2px solid white;
     }
   }
 }
 
 .course_card:hover {
-  border: 2px solid lighten($color: #000000, $amount: 50%);
+  border: 2px solid lighten($color: #000, $amount: 50%);
   transform: scale(1.05);
   transition: all 1s ease-in-out 0.5s;
   cursor: pointer;
 }
 
+.instructor_section {
+  .instructor_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .underline {
+      width: 80px;
+      height: 1px;
+      background: #f44e3c;
+      margin: 0.4rem 0 2rem;
+    }
+  }
+
+  .instructor {
+    letter-spacing: 0;
+    text-align: start;
+    margin: 2rem 0;
+    height: 200px;
+  }
+
+  .instructor_image {
+    float: left;
+    margin-right: 1.5rem;
+    clear: both;
+    margin-top: 0.65rem;
+  }
+
+  .colored_paragraph {
+    color: #f44e3c;
+  }
+
+  hr {
+    margin: 0.6rem 0;
+  }
+
+  .more {
+    border: 1px solid #f44e3c;
+    margin-bottom: 4rem;
+
+    .fa {
+      color: #f44e3c;
+    }
+  }
+}
+
 .featured_topics {
-  header {
+  .featured_topics_header {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
 
-    .underline {
+    .featured_underline {
       width: 80px;
       height: 3px;
-      background: rgb(244, 78, 60);
-      margin: 0.4rem 0 2rem;
+      background: #ec5242;
+      margin: 0.4rem 0 1.5rem;
     }
   }
 
@@ -194,22 +245,86 @@ body {
     margin-bottom: 2rem;
 
     header {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
 
     div {
-        margin: 0.5rem;
+      margin: 0.5rem;
     }
   }
 }
 
+.main_about {
+  .about_section {
+    margin: 5rem 0 2rem;
+    color: #f44e3c;
+  }
+
+  .vision_header {
+    color: #f44e3c;
+    margin: 1rem;
+  }
+
+  .vision_article {
+    text-align: start;
+  }
+
+  .vision_lists {
+    margin: 1rem 0;
+
+    .vision_list {
+      margin-left: 3rem;
+    }
+  }
+
+  .our_story_header {
+    color: #f44e3c;
+    margin: 2rem 0 0.8rem;
+  }
+
+  .our_story_article {
+    text-align: start;
+  }
+
+  .founder_image {
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
+
 .visible {
-    display: block;
-    z-index: 5;
+  display: block;
+  z-index: 5;
 }
 
 footer {
+  .partnership {
+    background: lighten($color: #000, $amount: 30%);
+    color: #fff;
+    padding: 1rem;
+
+    &_heading {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2rem;
+
+      .partnership_underline {
+        width: 60px;
+        height: 1px;
+        background: rgb(244, 78, 60);
+        margin: 0.4rem 0 1.5rem;
+      }
+    }
+  }
+
+  .partnership_img {
+    display: inline-block;
+    margin: 0 0.2rem;
+  }
+
   .footer_lists {
+    margin-top: 2rem;
     padding: 1rem;
     border-top: 1px solid lighten($color: black, $amount: 50%);
     display: flex;
@@ -220,14 +335,14 @@ footer {
       list-style-type: none;
     }
 
-    a {
-      color: lighten($color: #000000, $amount: 35%);
+    .footer_list_a {
+      color: lighten($color: #000, $amount: 35%);
       display: inline-block;
       margin: 0 0.5rem;
     }
   }
 
-  p {
+  .footer_paragraph {
     margin-top: -15px;
   }
 }
