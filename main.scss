@@ -42,7 +42,7 @@ body {
       color: lighten($color: #000, $amount: 35%);
 
       h1 {
-        color: rgb(244, 78, 60);
+        color: $orange-color;
       }
     }
 
@@ -50,6 +50,10 @@ body {
       text-decoration: none;
     }
   }
+}
+
+.desktop_navbar {
+  display: none;
 }
 
 .search_box {
@@ -65,10 +69,10 @@ body {
 
   button {
     cursor: pointer;
-    background: #f44e3c;
+    background: $orange-color;
     padding: 0.5rem;
     border-radius: 8px;
-    border: 1px solid #f44e3c;
+    border: 1px solid $orange-color;
   }
 }
 
@@ -114,23 +118,45 @@ body {
   }
 }
 
+
+.mobile_welcome_header_image {
+  display: block;
+}
+
+.desktop_welcome_header_image {
+  display: none;
+}
+
 .welcome_header {
   margin: 6rem 1rem 0;
+  text-align: center;
 
-  h2 {
-    font-size: 1.5rem;
-    margin: 1rem 0;
+
+  .welcome_header_title {
+    color: $orange-color;
+    font-size: 1rem;
+    font-weight: 100;
+
+    h2 {
+      margin: 1rem 0;
+    }
+  }
+  
+  .header_paragraph {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: white;
   }
 
-  p {
-    font-weight: 400;
-  }
 }
 
 .all_courses {
   margin: 3rem 1rem;
   padding: 1rem;
   text-transform: capitalize;
+  background: $black-color;
+  color: white;
+  padding-top: 2rem;
 
   header {
     display: flex;
@@ -141,39 +167,61 @@ body {
   .underline {
     width: 80px;
     height: 2px;
-    background: #f44e3c;
+    background: $orange-color;
     margin: 0.4rem 0 2rem;
   }
 
   .course_card {
     margin: 0.5rem;
     padding: 1rem;
-    background: darken($color: #fff, $amount: 8%);
-    border: 1px solid darken($color: #fff, $amount: 10%);
-    // box-shadow: 1.1px 1px 1px lighten($color: #000000, $amount: 10%);
-    position: relative;
+    background: lighten($color: $black-color, $amount: 10%);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-align: start;
+
+    &_image {
+      display: inline;
+      vertical-align: middle;
+    }
+
 
     h4 {
-      margin-top: 0.5rem;
+      display: inline-block;
+      margin-left: 0.5rem;
+      color: $orange-color;
+      vertical-align: middle;
+      font-size: 15px;
     }
 
-    .price {
-      position: absolute;
-      top: 20px;
-      right: 25px;
-      padding: 0.1rem;
-      background: white;
-      color: black;
-      border: 2px solid white;
-    }
-  }
-}
-
-.course_card:hover {
+    
+    &:hover {
   border: 2px solid lighten($color: #000, $amount: 50%);
   transform: scale(1.05);
   transition: all 1s ease-in-out 0.5s;
   cursor: pointer;
+}
+  }
+
+  &_button {
+    cursor: pointer;
+    background: $orange-color;
+    color: white;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    border: 1px solid $orange-color;
+    font-size: 15px;
+  }
+
+  &_link {
+    display: none;
+  }
+}
+
+.desktop_instructor {
+  display: none;
 }
 
 .instructor_section {
@@ -185,45 +233,77 @@ body {
     .underline {
       width: 80px;
       height: 1px;
-      background: #f44e3c;
+      background: $orange-color;
       margin: 0.4rem 0 2rem;
     }
   }
 
   .instructor {
-    letter-spacing: 0;
-    text-align: start;
-    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem 1rem;
+    justify-content: center;
+    align-items: center;
+    max-width: 375px;
     height: 200px;
-  }
+    margin: 1rem auto;
+    text-align: start;
+    line-height: 18px;
+    position: relative;
 
-  .instructor_image {
-    float: left;
-    margin-right: 1.5rem;
-    clear: both;
-    margin-top: 0.65rem;
+    &_image{
+      &_top {
+        width: 50%;
+        position: absolute;
+        margin: 0 auto;
+        top: 40px;
+        left: 12px;
+        z-index: 1;
+      }
+  
+      &_bottom {
+        width: 50%;
+        position: absolute;
+        margin: 0 auto;
+        top: 15px;
+        left: 0;
+      }
+    }
+
+
+    &_details {
+      grid-column: 2 / span 2;
+      margin-left: 0.4rem;
+    }
+
+    &_desc {
+      letter-spacing: 0;
+    }
   }
 
   .colored_paragraph {
-    color: #f44e3c;
+    color: $orange-color;
+    font-size: 12px;
+    font-weight: bold;
   }
 
   hr {
-    margin: 0.6rem 0;
+    margin: 0.3rem 0;
   }
 
   .more {
-    border: 1px solid #f44e3c;
+    border: 1px solid $gray-color;
     margin-bottom: 4rem;
+    padding: 0.8rem;
 
     .fa {
-      color: #f44e3c;
+      color: $orange-color;
     }
   }
 }
 
-.featured_topics {
-  .featured_topics_header {
+.categories_section {
+  .categories_header {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -231,8 +311,8 @@ body {
 
     .featured_underline {
       width: 80px;
-      height: 3px;
-      background: #ec5242;
+      height: 2px;
+      background: $orange-color;
       margin: 0.4rem 0 1.5rem;
     }
   }
@@ -255,41 +335,106 @@ body {
 }
 
 .main_about {
+  padding: 1rem;
+  max-width: 920px;
+  margin:  auto;
+  font-size: 15px;
+
   .about_section {
-    margin: 5rem 0 2rem;
-    color: #f44e3c;
+    margin: 6rem 0 2rem;
+    color: $orange-color;
   }
 
-  .vision_header {
-    color: #f44e3c;
+  .vision {
+    background: #fff;
+    padding: 1.5rem;
+
+  &_header {
+    color: $orange-color;
     margin: 1rem;
   }
 
-  .vision_article {
+  &_article {
     text-align: start;
   }
 
-  .vision_lists {
+  &_lists {
     margin: 1rem 0;
 
     .vision_list {
       margin-left: 3rem;
     }
+   }
   }
 
-  .our_story_header {
-    color: #f44e3c;
-    margin: 2rem 0 0.8rem;
+
+}
+
+.data_section {
+  width: 100%;
+  background: $black-color;
+  margin: 2rem 0;
+  padding: 2rem;
+  color: $gray-color;
+
+  &_header {
+    color: white;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
-  .our_story_article {
-    text-align: start;
+  .underline {
+    width: 80px;
+    height: 2px;
+    background: $orange-color;
+    margin: 0.5rem 0 2rem;
   }
 
-  .founder_image {
-    text-align: center;
-    margin: 2rem 0;
+  .data_article {
+    max-width: 680px;
+    margin: 0 auto;
   }
+
+  .data_description {
+    margin-bottom: 2rem;
+  }
+
+  .all_data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+  .data {
+    margin: 2rem auto;
+
+    p{
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.our_story_header {
+  color: $orange-color;
+  margin: 2rem 0 0.8rem;
+}
+
+.our_story_article {
+  text-align: start;
+}
+
+.story_paragraph {
+  max-width: 920px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.founder_image {
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .visible {
@@ -301,7 +446,8 @@ footer {
   .partnership {
     background: lighten($color: #000, $amount: 30%);
     color: #fff;
-    padding: 1rem;
+    padding: 1rem 1rem 2.5rem;
+    margin: 2rem;
 
     &_heading {
       display: flex;
@@ -312,7 +458,7 @@ footer {
       .partnership_underline {
         width: 60px;
         height: 1px;
-        background: rgb(244, 78, 60);
+        background: $orange-color;
         margin: 0.4rem 0 1.5rem;
       }
     }
@@ -339,10 +485,177 @@ footer {
       color: lighten($color: #000, $amount: 35%);
       display: inline-block;
       margin: 0 0.5rem;
+
+      &:hover {
+        transform: scale(1.4);
+        transition: all 1s ease-in-out 0.4s;
+      }
     }
   }
 
   .footer_paragraph {
     margin-top: -15px;
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .desktop_navbar {
+    display: block;
+    
+    .top_nav{
+      width: 100%;
+      height: 24px;
+      background: $black-color;
+      color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      
+      &_lists {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 4rem;
+      }
+    
+    &_list {
+      margin: 0 1rem;
+      list-style-type: none;
+
+      &_a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .desktop_nav{
+    width: 100%;
+      height: 60px;
+      position: fixed;
+      top: 24px;
+      left: 0;
+      margin-bottom: 1rem;
+      z-index: 2;
+      background: white;
+      border-bottom: 2px solid whitesmoke;
+      box-shadow: 2px 2px 5px darkgray;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4rem;
+    
+      a {
+        text-decoration: none;
+        color: lighten($color: #000, $amount: 35%);
+      }
+      
+      h1 {
+        color: $orange-color;
+      }
+
+      &_lists {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 1rem;
+
+        .logo {
+          text-decoration: none;
+        }
+      }
+
+      &_list {
+        margin-left: 1.5rem;
+      }
+  }
+}
+
+  .navbar {
+    display: none;
+  }
+
+  .all_courses{
+    margin: 3rem 0;
+    padding: 3rem ;
+    
+    .all_courses_card {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 0.3rem;
+    max-width: 920px;
+    margin: auto;
+    }
+    
+    .course_card {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h4 {
+        margin: 0.5rem 0;
+        display: block;
+        font-size: large;
+        font-weight: bold;
+      }
+
+    }
+
+    &_button {
+      display: none;
+    }
+
+    &_link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #d3d3d3;
+      text-transform: uppercase;
+    }
+  }
+
+  .mobile_instructor {
+    display: none;
+  }
+
+  .desktop_instructor {
+    display: block;
+  }
+
+  .instructor_section {
+    .instructors {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      align-items: center;
+      font-size: 12px;
+      grid-gap: 0.5rem;
+      max-width: 768px;
+      margin: 1rem auto;
+    }
+
+    .instructor {
+      margin: 1rem 0.4rem;
+    }
+  }
+
+  .more {
+    display: none;
+  }
+
+  .categories_section {
+    margin-bottom: 2rem;
+
+    .feature_articles {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 0 2rem;
+    }
   }
 }

@@ -38,10 +38,14 @@ body {
   color: #595959;
 }
 .navbar ul a h1 {
-  color: rgb(244, 78, 60);
+  color: #ec5242;
 }
 .navbar ul .logo {
   text-decoration: none;
+}
+
+.desktop_navbar {
+  display: none;
 }
 
 .search_box {
@@ -56,10 +60,10 @@ body {
 }
 .search_box button {
   cursor: pointer;
-  background: #f44e3c;
+  background: #ec5242;
   padding: 0.5rem;
   border-radius: 8px;
-  border: 1px solid #f44e3c;
+  border: 1px solid #ec5242;
 }
 
 .menu_options {
@@ -99,21 +103,39 @@ body {
   text-decoration: underline;
 }
 
+.mobile_welcome_header_image {
+  display: block;
+}
+
+.desktop_welcome_header_image {
+  display: none;
+}
+
 .welcome_header {
   margin: 6rem 1rem 0;
+  text-align: center;
 }
-.welcome_header h2 {
-  font-size: 1.5rem;
+.welcome_header .welcome_header_title {
+  color: #ec5242;
+  font-size: 1rem;
+  font-weight: 100;
+}
+.welcome_header .welcome_header_title h2 {
   margin: 1rem 0;
 }
-.welcome_header p {
-  font-weight: 400;
+.welcome_header .header_paragraph {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: white;
 }
 
 .all_courses {
   margin: 3rem 1rem;
   padding: 1rem;
   text-transform: capitalize;
+  background: #272a31;
+  color: white;
+  padding-top: 2rem;
 }
 .all_courses header {
   display: flex;
@@ -123,34 +145,52 @@ body {
 .all_courses .underline {
   width: 80px;
   height: 2px;
-  background: #f44e3c;
+  background: #ec5242;
   margin: 0.4rem 0 2rem;
 }
 .all_courses .course_card {
   margin: 0.5rem;
   padding: 1rem;
-  background: #ebebeb;
-  border: 1px solid #e6e6e6;
-  position: relative;
+  background: #3e424d;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  text-align: start;
+}
+.all_courses .course_card_image {
+  display: inline;
+  vertical-align: middle;
 }
 .all_courses .course_card h4 {
-  margin-top: 0.5rem;
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #ec5242;
+  vertical-align: middle;
+  font-size: 15px;
 }
-.all_courses .course_card .price {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  padding: 0.1rem;
-  background: white;
-  color: black;
-  border: 2px solid white;
-}
-
-.course_card:hover {
+.all_courses .course_card:hover {
   border: 2px solid gray;
   transform: scale(1.05);
   transition: all 1s ease-in-out 0.5s;
   cursor: pointer;
+}
+.all_courses_button {
+  cursor: pointer;
+  background: #ec5242;
+  color: white;
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+  border: 1px solid #ec5242;
+  font-size: 15px;
+}
+.all_courses_link {
+  display: none;
+}
+
+.desktop_instructor {
+  display: none;
 }
 
 .instructor_section .instructor_header {
@@ -161,67 +201,103 @@ body {
 .instructor_section .instructor_header .underline {
   width: 80px;
   height: 1px;
-  background: #f44e3c;
+  background: #ec5242;
   margin: 0.4rem 0 2rem;
 }
 .instructor_section .instructor {
-  letter-spacing: 0;
-  text-align: start;
-  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 375px;
   height: 200px;
+  margin: 1rem auto;
+  text-align: start;
+  line-height: 18px;
+  position: relative;
 }
-.instructor_section .instructor_image {
-  float: left;
-  margin-right: 1.5rem;
-  clear: both;
-  margin-top: 0.65rem;
+.instructor_section .instructor_image_top {
+  width: 50%;
+  position: absolute;
+  margin: 0 auto;
+  top: 40px;
+  left: 12px;
+  z-index: 1;
+}
+.instructor_section .instructor_image_bottom {
+  width: 50%;
+  position: absolute;
+  margin: 0 auto;
+  top: 15px;
+  left: 0;
+}
+.instructor_section .instructor_details {
+  grid-column: 2/span 2;
+  margin-left: 0.4rem;
+}
+.instructor_section .instructor_desc {
+  letter-spacing: 0;
 }
 .instructor_section .colored_paragraph {
-  color: #f44e3c;
+  color: #ec5242;
+  font-size: 12px;
+  font-weight: bold;
 }
 .instructor_section hr {
-  margin: 0.6rem 0;
+  margin: 0.3rem 0;
 }
 .instructor_section .more {
-  border: 1px solid #f44e3c;
+  border: 1px solid #d3d3d3;
   margin-bottom: 4rem;
+  padding: 0.8rem;
 }
 .instructor_section .more .fa {
-  color: #f44e3c;
+  color: #ec5242;
 }
 
-.featured_topics .featured_topics_header {
+.categories_section .categories_header {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
 }
-.featured_topics .featured_topics_header .featured_underline {
+.categories_section .categories_header .featured_underline {
   width: 80px;
-  height: 3px;
+  height: 2px;
   background: #ec5242;
   margin: 0.4rem 0 1.5rem;
 }
-.featured_topics .feature_articles {
+.categories_section .feature_articles {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   grid-gap: 2rem 3rem;
   margin-bottom: 2rem;
 }
-.featured_topics .feature_articles header {
+.categories_section .feature_articles header {
   font-size: 1.5rem;
 }
-.featured_topics .feature_articles div {
+.categories_section .feature_articles div {
   margin: 0.5rem;
 }
 
+.main_about {
+  padding: 1rem;
+  max-width: 920px;
+  margin: auto;
+  font-size: 15px;
+}
 .main_about .about_section {
-  margin: 5rem 0 2rem;
-  color: #f44e3c;
+  margin: 6rem 0 2rem;
+  color: #ec5242;
+}
+.main_about .vision {
+  background: #fff;
+  padding: 1.5rem;
 }
 .main_about .vision_header {
-  color: #f44e3c;
+  color: #ec5242;
   margin: 1rem;
 }
 .main_about .vision_article {
@@ -233,14 +309,62 @@ body {
 .main_about .vision_lists .vision_list {
   margin-left: 3rem;
 }
-.main_about .our_story_header {
-  color: #f44e3c;
+
+.data_section {
+  width: 100%;
+  background: #272a31;
+  margin: 2rem 0;
+  padding: 2rem;
+  color: #d3d3d3;
+}
+.data_section_header {
+  color: white;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.data_section .underline {
+  width: 80px;
+  height: 2px;
+  background: #ec5242;
+  margin: 0.5rem 0 2rem;
+}
+.data_section .data_article {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.data_section .data_description {
+  margin-bottom: 2rem;
+}
+.data_section .all_data {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.data_section .data {
+  margin: 2rem auto;
+}
+.data_section .data p {
+  margin-top: 0.5rem;
+}
+
+.our_story_header {
+  color: #ec5242;
   margin: 2rem 0 0.8rem;
 }
-.main_about .our_story_article {
+
+.our_story_article {
   text-align: start;
 }
-.main_about .founder_image {
+
+.story_paragraph {
+  max-width: 920px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+.founder_image {
   text-align: center;
   margin: 2rem 0;
 }
@@ -253,7 +377,8 @@ body {
 footer .partnership {
   background: #4d4d4d;
   color: #fff;
-  padding: 1rem;
+  padding: 1rem 1rem 2.5rem;
+  margin: 2rem;
 }
 footer .partnership_heading {
   display: flex;
@@ -264,7 +389,7 @@ footer .partnership_heading {
 footer .partnership_heading .partnership_underline {
   width: 60px;
   height: 1px;
-  background: rgb(244, 78, 60);
+  background: #ec5242;
   margin: 0.4rem 0 1.5rem;
 }
 footer .partnership_img {
@@ -287,6 +412,144 @@ footer .footer_lists .footer_list_a {
   display: inline-block;
   margin: 0 0.5rem;
 }
+footer .footer_lists .footer_list_a:hover {
+  transform: scale(1.4);
+  transition: all 1s ease-in-out 0.4s;
+}
 footer .footer_paragraph {
   margin-top: -15px;
+}
+
+@media (min-width: 768px) {
+  body {
+    width: 100%;
+    margin: 0;
+  }
+  .desktop_navbar {
+    display: block;
+  }
+  .desktop_navbar .top_nav {
+    width: 100%;
+    height: 24px;
+    background: #272a31;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .desktop_navbar .top_nav_lists {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 4rem;
+  }
+  .desktop_navbar .top_nav_list {
+    margin: 0 1rem;
+    list-style-type: none;
+  }
+  .desktop_navbar .top_nav_list_a {
+    color: white;
+    text-decoration: none;
+  }
+  .desktop_navbar .desktop_nav {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 24px;
+    left: 0;
+    margin-bottom: 1rem;
+    z-index: 2;
+    background: white;
+    border-bottom: 2px solid whitesmoke;
+    box-shadow: 2px 2px 5px darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+  }
+  .desktop_navbar .desktop_nav a {
+    text-decoration: none;
+    color: #595959;
+  }
+  .desktop_navbar .desktop_nav h1 {
+    color: #ec5242;
+  }
+  .desktop_navbar .desktop_nav_lists {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+  }
+  .desktop_navbar .desktop_nav_lists .logo {
+    text-decoration: none;
+  }
+  .desktop_navbar .desktop_nav_list {
+    margin-left: 1.5rem;
+  }
+  .navbar {
+    display: none;
+  }
+  .all_courses {
+    margin: 3rem 0;
+    padding: 3rem;
+  }
+  .all_courses .all_courses_card {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.3rem;
+    max-width: 920px;
+    margin: auto;
+  }
+  .all_courses .course_card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .all_courses .course_card h4 {
+    margin: 0.5rem 0;
+    display: block;
+    font-size: large;
+    font-weight: bold;
+  }
+  .all_courses_button {
+    display: none;
+  }
+  .all_courses_link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #d3d3d3;
+    text-transform: uppercase;
+  }
+  .mobile_instructor {
+    display: none;
+  }
+  .desktop_instructor {
+    display: block;
+  }
+  .instructor_section .instructors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    grid-gap: 0.5rem;
+    max-width: 768px;
+    margin: 1rem auto;
+  }
+  .instructor_section .instructor {
+    margin: 1rem 0.4rem;
+  }
+  .more {
+    display: none;
+  }
+  .categories_section {
+    margin-bottom: 2rem;
+  }
+  .categories_section .feature_articles {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 2rem;
+  }
 }/*# sourceMappingURL=main.css.map */
