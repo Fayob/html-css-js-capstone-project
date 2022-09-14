@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
+    <!-- NavBar Section-->
     <nav class="navbar">
       <ul class="navbar_lists">
         <li class="navbar_list">
@@ -33,6 +34,46 @@
         </li>
       </ul>
     </nav>
+    <nav class="desktop_navbar">
+      <div class="top_nav">
+        <ul class="top_nav_lists">
+          <li class="top_nav_list">
+            <a href="#" class="top_nav_list_a"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li class="top_nav_list">
+            <a href="#" class="top_nav_list_a"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li class="top_nav_list">
+            <a href="#" class="top_nav_list_a">English</a>
+          </li>
+          <li class="top_nav_list">
+            <a href="#" class="top_nav_list_a">My Page</a>
+          </li>
+          <li class="top_nav_list">
+            <a href="#" class="top_nav_list_a">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <section class="desktop_nav">
+        <div>
+          <a href="/main.html" class="logo"><h1>Fayob</h1> </a>
+        </div>
+        <div>
+          <ul class="desktop_nav_lists">
+            <li class="desktop_nav_list"><a href="/about.html">About</a></li>
+            <li class="desktop_nav_list"><a href="#">Contact Us</a></li>
+            <li class="desktop_nav_list"><a href="#">Blog</a></li>
+            <li class="desktop_nav_list"><a href="#">Program</a></li>
+            <li class="desktop_nav_list"><a href="#">Help</a></li>
+            <li class="desktop_nav_list"><a href="#">Careers</a></li>
+          </ul>
+        </div>
+      </section>
+    </nav>
+
+    <!-- Side Section -->
     <aside class="search_box">
       <input type="text" placeholder="Search for your favorite course" />
       <button type="button">Search</button>
@@ -42,188 +83,156 @@
         ><i class="fa fa-close fa-2x" id="close_bar" aria-hidden="true"></i
       ></a>
       <ul>
-        <li><a href="/about.html">About Us</a></li>
+        <li><a href="/about.html">About</a></li>
         <li><a href="#">Contact Us</a></li>
         <li><a href="#">Blog</a></li>
         <li><a href="#">Programmes</a></li>
         <li><a href="#">Help</a></li>
         <li><a href="#">Careers</a></li>
-        <li><a href="#">Sign In</a></li>
-        <li><a href="#">Register</a></li>
       </ul>
     </aside>
+
+    <!-- Main Section -->
     <main>
       <header class="welcome_header">
-        <img
+        <!-- <img
           src="./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
           alt="welcome Image"
           width="100%"
-          height="280px"
+          height="320px"
+          class="mobile_welcome_header_image"
         />
-        <h2>Welcome to Fayob online courses</h2>
-        <p>
+        <img
+          src="./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
+          alt="welcome Image"
+          height="400px"
+          class="desktop_welcome_header_image"
+        /> -->
+        <div class="welcome_header_title">
+          <h4>"Hello! Sharing world"</h4>
+          <h2>Welcome to Fayob online learning platform</h2>
+        </div>
+
+        <p class="header_paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
           corrupti tenetur aspernatur repellat ex assumenda omnis, ducimus
           provident, accusamus deserunt culpa soluta a, illo laborum voluptas
           eaque dolores sint minus.
         </p>
       </header>
+
+      <!-- Course Section -->
       <section class="all_courses">
         <header>
-          <h2>All Courses</h2>
+          <h2>Main Courses</h2>
           <div class="underline"></div>
         </header>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">free</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">$30.99</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">free</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">$30.99</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">free</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">$30.99</p>
-          <h6>3 months ago</h6>
-        </article>
-        <article class="course_card">
-          <img
-            src="./assets/javascript.png"
-            alt="javascript image"
-            width="95%"
-          />
-          <h4>Complete Javascript Course</h4>
-          <h5>John Doe</h5>
-          <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
-          <p class="price">$30.99</p>
-          <h6>3 months ago</h6>
-        </article>
+        <div class="all_courses_card">
+          <article class="course_card">
+            <div>
+              <img
+                src="./assets/javascript.png"
+                alt="javascript image"
+                width="50px"
+                height="50px"
+                class="course_card_image"
+              />
+              <h4>Javascript</h4>
+            </div>
+            <div class=".course_card_details">
+              <h3>John Doe</h3>
+              <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
+              <p class="price">$30.99</p>
+              <h6>3 months ago</h6>
+            </div>
+          </article>
+          <article class="course_card">
+            <div>
+              <img
+                src="./assets/React.jpg"
+                alt="react image"
+                width="50px"
+                height="50px"
+                class="course_card_image"
+              />
+              <h4>React</h4>
+            </div>
+            <div class=".course_card_details">
+              <h3>Bufett Ring</h3>
+              <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
+              <p class="price">$30.99</p>
+              <h6>3 days ago</h6>
+            </div>
+          </article>
+          <article class="course_card">
+            <div>
+              <img
+                src="./assets/Ruby.jpg"
+                alt="ruby image"
+                width="50px"
+                height="50px"
+                class="course_card_image"
+              />
+              <h4>Ruby</h4>
+            </div>
+            <div class=".course_card_details">
+              <h3>James shirt</h3>
+              <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
+              <p class="price">$30.99</p>
+              <h6>1 month ago</h6>
+            </div>
+          </article>
+          <article class="course_card">
+            <div>
+              <img
+                src="./assets/Python.jpg"
+                alt="python image"
+                width="50px"
+                height="50px"
+                class="course_card_image"
+              />
+              <h4>Python</h4>
+            </div>
+            <div class=".course_card_details">
+              <h3>John wright</h3>
+              <i class="fa fa-star" aria-hidden="true"> 4.5 (50k reviews) </i>
+              <p class="price">$30.99</p>
+              <h6>2 weeks ago</h6>
+            </div>
+          </article>
+          <article class="course_card">
+            <div>
+              <img
+                src="./assets/html-css.png"
+                alt="html-css image"
+                width="50px"
+                height="50px"
+                class="course_card_image"
+              />
+              <h4>Html Css</h4>
+            </div>
+            <div class=".course_card_details">
+              <h3>Lincoln Ruth</h3>
+              <i class="fa fa-star" aria-hidden="true"> 4.7 (53k reviews) </i>
+              <p class="price">$30.99</p>
+              <h6>3 day ago</h6>
+            </div>
+          </article>
+        </div>
+        <button type="button" class="all_courses_button">
+          Join Fayob learning Today
+        </button>
+        <a href="#" class="all_courses_link">See All Courses</a>
       </section>
     </main>
 
-    <section class="instructor_section">
-      <header class="instructor_header">
-        <h2>Featured Instructors</h2>
-        <div class="underline"></div>
-      </header>
-      <article class="instructor">
-        <img
-          src="./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
-          alt=""
-          class="instructor_image"
-          width="40%"
-          height="200px"
-        />
-        <h3 class="instructor_name">John Doe</h3>
-        <p class="colored_paragraph">
-          Lorem ipsum dolor sit amet consectetur elit. Ad, beatae.
-        </p>
-        <hr width="10%" />
-        <p class="intructor_desc">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus neque
-          repudiandae quas aspernatur architecto amet?
-        </p>
-      </article>
-      <article class="instructor">
-        <img
-          src="./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
-          alt=""
-          class="instructor_image"
-          width="40%"
-          height="200px"
-        />
-        <h3 class="instructor_name">John Doe</h3>
-        <p class="colored_paragraph">
-          Lorem ipsum dolor sit amet consectetur elit. Ad, beatae.
-        </p>
-        <hr width="10%" />
-        <p class="intructor_desc">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus neque
-          repudiandae quas aspernatur architecto amet?
-        </p>
-      </article>
-      <article class="instructor">
-        <img
-          src="./assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg"
-          alt=""
-          class="instructor_image"
-          width="40%"
-          height="200px"
-        />
-        <h3 class="instructor_name">John Doe</h3>
-        <p class="colored_paragraph">
-          Lorem ipsum dolor sit amet consectetur elit. Ad, beatae.
-        </p>
-        <hr width="10%" />
-        <p class="intructor_desc">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus neque
-          repudiandae quas aspernatur architecto amet?
-        </p>
-      </article>
-      <h4 class="more">More <i class="fa fa-chevron-down"></i></h4>
-    </section>
+    <!-- Featured Instructor Section -->
+    <section class="instructor_section desktop_instructor"></section>
+    <section class="instructor_section mobile_instructor"></section>
 
-    <section class="featured_topics">
-      <header class="featured_topics_header">
+    <!-- Category Section -->
+    <section class="categories_section">
+      <header class="categories_header">
         <h2>Category</h2>
         <div class="featured_underline"></div>
       </header>
@@ -231,66 +240,67 @@
         <summary class="feature_article">
           <h4>Development</h4>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Web Development</h5>
+            <p>212, 423, 789 students</p>
           </div>
           <div>
             <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <p>112, 390, 674 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Machine Learning</h5>
+            <p>96, 780, 954 students</p>
           </div>
         </summary>
         <summary class="feature_article">
           <h4>IT and Software</h4>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>AWS Certificate</h5>
+            <p>32, 540, 213 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Ethical Hacking</h5>
+            <p>66, 390, 123 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Cyber Security</h5>
+            <p>20, 910, 312 students</p>
           </div>
         </summary>
         <summary class="feature_article">
           <h4>Design</h4>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Photoshop</h5>
+            <p>86, 356, 213 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Grapics Design</h5>
+            <p>101, 456, 789 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>Drawing</h5>
+            <p>42, 896, 234 students</p>
           </div>
         </summary>
         <summary class="feature_article">
           <h4>Business</h4>
           <div>
-            <h5>Python</h5>
+            <h5>Financial Analysis</h5>
+            <p>123, 456, 789 students</p>
+          </div>
+          <div>
+            <h5>SQL</h5>
             <p>36, 390, 213 students</p>
           </div>
           <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
-          </div>
-          <div>
-            <h5>Python</h5>
-            <p>36, 390, 213 students</p>
+            <h5>PMP</h5>
+            <p>37, 395, 273 students</p>
           </div>
         </summary>
       </article>
     </section>
 
+    <!-- Footer Section -->
     <footer>
       <div class="partnership">
         <div class="partnership_heading">
