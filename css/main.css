@@ -103,14 +103,6 @@ body {
   text-decoration: underline;
 }
 
-.mobile_welcome_header_image {
-  display: block;
-}
-
-.desktop_welcome_header_image {
-  display: none;
-}
-
 .welcome_header {
   margin: 6rem 1rem 0;
   text-align: center;
@@ -325,7 +317,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.data_section .underline {
+.data_section .data_underline {
   width: 80px;
   height: 2px;
   background: #ec5242;

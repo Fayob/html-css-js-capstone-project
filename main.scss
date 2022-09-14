@@ -118,19 +118,9 @@ body {
   }
 }
 
-
-.mobile_welcome_header_image {
-  display: block;
-}
-
-.desktop_welcome_header_image {
-  display: none;
-}
-
 .welcome_header {
   margin: 6rem 1rem 0;
   text-align: center;
-
 
   .welcome_header_title {
     color: $orange-color;
@@ -141,13 +131,12 @@ body {
       margin: 1rem 0;
     }
   }
-  
+
   .header_paragraph {
     margin: 2rem 0;
     padding: 1rem;
     background: white;
   }
-
 }
 
 .all_courses {
@@ -187,7 +176,6 @@ body {
       vertical-align: middle;
     }
 
-
     h4 {
       display: inline-block;
       margin-left: 0.5rem;
@@ -196,13 +184,12 @@ body {
       font-size: 15px;
     }
 
-    
     &:hover {
-  border: 2px solid lighten($color: #000, $amount: 50%);
-  transform: scale(1.05);
-  transition: all 1s ease-in-out 0.5s;
-  cursor: pointer;
-}
+      border: 2px solid lighten($color: #000, $amount: 50%);
+      transform: scale(1.05);
+      transition: all 1s ease-in-out 0.5s;
+      cursor: pointer;
+    }
   }
 
   &_button {
@@ -251,7 +238,7 @@ body {
     line-height: 18px;
     position: relative;
 
-    &_image{
+    &_image {
       &_top {
         width: 50%;
         position: absolute;
@@ -260,7 +247,7 @@ body {
         left: 12px;
         z-index: 1;
       }
-  
+
       &_bottom {
         width: 50%;
         position: absolute;
@@ -269,7 +256,6 @@ body {
         left: 0;
       }
     }
-
 
     &_details {
       grid-column: 2 / span 2;
@@ -337,7 +323,7 @@ body {
 .main_about {
   padding: 1rem;
   max-width: 920px;
-  margin:  auto;
+  margin: auto;
   font-size: 15px;
 
   .about_section {
@@ -349,25 +335,23 @@ body {
     background: #fff;
     padding: 1.5rem;
 
-  &_header {
-    color: $orange-color;
-    margin: 1rem;
-  }
-
-  &_article {
-    text-align: start;
-  }
-
-  &_lists {
-    margin: 1rem 0;
-
-    .vision_list {
-      margin-left: 3rem;
+    &_header {
+      color: $orange-color;
+      margin: 1rem;
     }
-   }
+
+    &_article {
+      text-align: start;
+    }
+
+    &_lists {
+      margin: 1rem 0;
+
+      .vision_list {
+        margin-left: 3rem;
+      }
+    }
   }
-
-
 }
 
 .data_section {
@@ -386,7 +370,7 @@ body {
     align-items: center;
   }
 
-  .underline {
+  .data_underline {
     width: 80px;
     height: 2px;
     background: $orange-color;
@@ -405,13 +389,12 @@ body {
   .all_data {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
   }
 
   .data {
     margin: 2rem auto;
 
-    p{
+    p {
       margin-top: 0.5rem;
     }
   }
@@ -506,8 +489,8 @@ footer {
 
   .desktop_navbar {
     display: block;
-    
-    .top_nav{
+
+    .top_nav {
       width: 100%;
       height: 24px;
       background: $black-color;
@@ -516,27 +499,27 @@ footer {
       top: 0;
       left: 0;
       z-index: 10;
-      
+
       &_lists {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         padding: 0 4rem;
       }
-    
-    &_list {
-      margin: 0 1rem;
-      list-style-type: none;
 
-      &_a {
-        color: white;
-        text-decoration: none;
+      &_list {
+        margin: 0 1rem;
+        list-style-type: none;
+
+        &_a {
+          color: white;
+          text-decoration: none;
+        }
       }
     }
-  }
 
-  .desktop_nav{
-    width: 100%;
+    .desktop_nav {
+      width: 100%;
       height: 60px;
       position: fixed;
       top: 24px;
@@ -550,12 +533,12 @@ footer {
       justify-content: space-between;
       align-items: center;
       padding: 0 4rem;
-    
+
       a {
         text-decoration: none;
         color: lighten($color: #000, $amount: 35%);
       }
-      
+
       h1 {
         color: $orange-color;
       }
@@ -574,25 +557,25 @@ footer {
       &_list {
         margin-left: 1.5rem;
       }
+    }
   }
-}
 
   .navbar {
     display: none;
   }
 
-  .all_courses{
+  .all_courses {
     margin: 3rem 0;
-    padding: 3rem ;
-    
+    padding: 3rem;
+
     .all_courses_card {
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-gap: 0.3rem;
-    max-width: 920px;
-    margin: auto;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 0.3rem;
+      max-width: 920px;
+      margin: auto;
     }
-    
+
     .course_card {
       margin: 0;
       display: flex;
@@ -606,7 +589,6 @@ footer {
         font-size: large;
         font-weight: bold;
       }
-
     }
 
     &_button {
