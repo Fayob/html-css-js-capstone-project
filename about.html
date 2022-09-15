@@ -19,7 +19,8 @@
     <nav class="navbar">
       <ul class="navbar_lists">
         <li class="navbar_list">
-          <a href="#"><i aria-hidden="true"></i></a>
+          <a href="#"><i id="nav" class="fa fa-bars fa-2x" aria-hidden="true"></i
+          ></i></a>
         </li>
         <li class="navbar_list">
           <a href="/main.html" class="logo"><h1>Fayob</h1> </a>
@@ -69,6 +70,21 @@
       </section>
     </nav>
 
+    <!-- Side Bar Section -->
+    <aside class="menu_options">
+      <a href="#"
+        ><i class="fa fa-close fa-2x" id="close_bar" aria-hidden="true"></i
+      ></a>
+      <ul>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Programmes</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </aside>
+
     <main class="main_about">
       <section class="about_section">
         <h2>
@@ -102,7 +118,15 @@
           </ul>
         </article>
       </section>
+
+      <!-- Contact Section -->
+      <section class="contact_section">
+        <p>Please contact us per Email for any further questions about Fayob Learning Program!</p>
+        <a href="#" class="contact_section_a">adedejifavour6@gmail.com</a>
+      </section>
     </main>
+
+    <!-- Data Section -->
     <section class="data_section">
       <header class="data_section_header">
         <h2>We Just Keep Growing</h2>
@@ -129,10 +153,12 @@
         </div>
         </div>
       </article>
-
+      <div class="data-image">
+        <img src="./assets/learning-data.png" alt="data image" width="300px" height="200px">
+      </div>
     </section>
     
-    <section>
+    <section class="our_story">
       <header class="our_story_header">
         <h2>Our Story</h2>
       </header>
@@ -146,79 +172,62 @@
           libero esse vero. Possimus ipsa ratione sequi deleniti blanditiis
           libero? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi cum reiciendis quasi in voluptas delectus rerum quaerat? Debitis, magnam quaerat!
         </p>
+        <div class="story_image">
+          <img src="./assets/learnining-vision.jpg" alt="learning vision" class="story_image_img">
+          <img src="./assets/e-learning-2.jpg" alt="e-learning" class="story_image_img">
+        </div>
       </article>
     </section>
-    <footer>
-      <div class="partnership">
-        <div class="partnership_heading">
-          <h2>Partner</h2>
-          <div class="partnership_underline"></div>
-        </div>
-        <img
-          src="./assets/-31600822121rk0lmm4sqe.png"
-          alt="airbnb logo"
-          width="200px"
-          height="100px"
-          class="partnership_img"
-        />
-        <img
-          src="./assets/apple-logo.png"
-          alt="apple logo"
-          width="200px"
-          height="100px"
-          class="partnership_img"
-        />
-        <img
-          src="./assets/google-logo.png"
-          alt="google logo"
-          width="200px"
-          height="100px"
-          class="partnership_img"
-        />
-        <img
-          src="./assets/mozilla-logo-11609369622n1zxmrjknf.png"
-          alt="mozilla logo"
-          width="200px"
-          height="100px"
-          class="partnership_img"
-        />
-        <img
-          src="./assets/microsoft-logoo.jpg"
-          alt="microsoft logo"
-          width="200px"
-          height="100px"
-          class="partnership_img"
-        />
+    <section>
+    <div class="partnership about_partner">
+      <div class="partnership_heading">
+        <h2>Partner</h2>
+        <div class="partnership_underline"></div>
       </div>
-
-      <ul class="footer_lists">
-        <li class="footer_list">
-          <a href="#" class="footer_list_a"
-            ><i class="fa fa-twitter" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li class="footer_list">
-          <a href="#" class="footer_list_a"
-            ><i class="fa fa-facebook" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li class="footer_list">
-          <a href="#" class="footer_list_a"
-            ><i class="fa fa-github" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li class="footer_list">
-          <a href="#" class="footer_list_a"
-            ><i class="fa fa-linkedin" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li class="footer_list">
-          <a href="#" class="footer_list_a"
-            ><i class="fa fa-whatsapp" aria-hidden="true"></i
-          ></a>
-        </li>
-      </ul>
-      <p class="footer_paragraph">&copy; 2022 Fayob inc. All right reserved</p>
+      <img
+      src="./assets/-31600822121rk0lmm4sqe.png"
+      alt="airbnb logo"
+      width="200px"
+      height="100px"
+      class="partnership_img"
+      />
+      <img
+      src="./assets/apple-logo.png"
+      alt="apple logo"
+      width="200px"
+      height="100px"
+      class="partnership_img"
+      />
+      <img
+      src="./assets/google-logo.png"
+      alt="google logo"
+      width="200px"
+      height="100px"
+      class="partnership_img"
+      />
+      <img
+      src="./assets/mozilla-logo-11609369622n1zxmrjknf.png"
+      alt="mozilla logo"
+      width="200px"
+      height="100px"
+      class="partnership_img"
+      />
+      <img
+      src="./assets/microsoft-logoo.jpg"
+      alt="microsoft logo"
+      width="200px"
+      height="100px"
+      class="partnership_img"
+      />
+    </div>
+    </section>
+      <footer class="footer about_footer">
+        <h2><span>&copy;</span></h2>
+        <h2 class="footer_bold"> Fayob <br>Online Learning</h2>
+        <div class="footer_paragraph">
+          <p class="footer_p"> 2022 Fayob inc. All right reserved.</p>
+          <p class="footer_last_p">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus, quaerat?</p>
+        </div>
     </footer>
   </body>
   <script src="/main.js"></script>
