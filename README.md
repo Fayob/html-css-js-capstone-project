@@ -5,14 +5,16 @@
 This project is based on html, css and javascript technology to build and design a capstone web development project. The project was implemented with linters which make sure that some specific features are implemented successfully on the project for best user experience.
 
 The purpose of the project is to create a website that has the best user experience. The linters in this project includes:
-"lighthouse" which help to improve the quality of webpage,
-"webhint" is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors and
-"Stylelint" which helps you avoid errors and enforce conventions in your styles.
-The goal here is to master all of the tools and best practices because they will be used more often throughout Microverse projects and most likely in future job as well.
+
+- "lighthouse" which help to improve the quality of webpage,
+- "webhint" is a customizable linting tool that helps you improve your site's accessibility, speed, cross-browser compatibility, and more by checking your code for best practices and common errors,
+- "Stylelint" which helps you avoid errors and enforce conventions in your styles and
+- "ESLint" which check for javascript syntax error.
 
 ## Built With
 
-Major languages: html, css, javascript
+- Major languages: html, css, javascript
+- Pre-Processor: SASS
 
 ## Getting Started
 
@@ -40,12 +42,20 @@ LinkedIn: [@abimbola-ade](https://www.linkedin.com/in/abimbola-ade)
 
 ## Live Demo
 
-[my_portfolio](https://fayob.github.io/portfolio-setup-project/)
+[click here to see the live demo](https://fayob.github.io/html-css-js-capstone-project/)
+
+## Project Overview
+
+[link to the project overview](https://www.loom.com/share/91afb673bd904d3e98eae53788f5a20e)
+
+## Acknowledgement
+
+I would like to commend Cindy Shin in Behance for the conference design made, it actually guides me to build and develop this project. The guidelines are perfect and I really enjoyed following them. Thanks
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](#).
+Feel free to check the [issues page](https://github.com/Fayob/html-css-js-capstone-project/issues/2).
 
 ## Show your support
 
