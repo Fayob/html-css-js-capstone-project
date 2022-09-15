@@ -6,13 +6,13 @@
 }
 
 body {
-  width: 95%;
+  width: 100%;
   font-family: "Lato", sans-serif;
   line-height: 24px;
   letter-spacing: 1px;
   text-align: center;
   background: rgb(245, 243, 243);
-  margin: 1rem;
+  margin: 1rem auto;
 }
 
 .navbar {
@@ -105,15 +105,21 @@ body {
 
 .welcome_header {
   margin: 6rem 1rem 0;
-  text-align: center;
+  padding: 0 1rem;
+  text-align: start;
 }
 .welcome_header .welcome_header_title {
   color: #ec5242;
   font-size: 1rem;
   font-weight: 100;
 }
+.welcome_header .welcome_header_title_h4 {
+  transform: scale(1, 1.3);
+}
 .welcome_header .welcome_header_title h2 {
   margin: 1rem 0;
+  font-size: 2rem;
+  line-height: 2rem;
 }
 .welcome_header .header_paragraph {
   margin: 2rem 0;
@@ -122,7 +128,7 @@ body {
 }
 
 .all_courses {
-  margin: 3rem 1rem;
+  margin: 3rem 0;
   padding: 1rem;
   text-transform: capitalize;
   background: #272a31;
@@ -241,7 +247,7 @@ body {
 }
 .instructor_section .more {
   border: 1px solid #d3d3d3;
-  margin-bottom: 4rem;
+  margin: 0 1rem 4rem;
   padding: 0.8rem;
 }
 .instructor_section .more .fa {
@@ -302,15 +308,24 @@ body {
   margin-left: 3rem;
 }
 
+.contact_section {
+  margin: 2rem 1rem;
+}
+.contact_section_a {
+  display: inline-block;
+  color: #272a31;
+  margin-top: 0.5rem;
+}
+
 .data_section {
   width: 100%;
-  background: #272a31;
-  margin: 2rem 0;
+  background: #fff;
+  margin: 2rem 0 0.5rem;
   padding: 2rem;
-  color: #d3d3d3;
+  color: #272a31;
 }
 .data_section_header {
-  color: white;
+  color: #272a31;
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -321,7 +336,7 @@ body {
   width: 80px;
   height: 2px;
   background: #ec5242;
-  margin: 0.5rem 0 2rem;
+  margin: 1rem 0 2rem;
 }
 .data_section .data_article {
   max-width: 680px;
@@ -340,10 +355,23 @@ body {
 .data_section .data p {
   margin-top: 0.5rem;
 }
+.data_section .data-image {
+  max-width: 380px;
+  margin: 1rem auto;
+  border: 1px solid #d3d3d3;
+}
+
+.our_story {
+  width: 100%;
+  background: #fff;
+  color: #272a31;
+  padding: 2rem;
+  margin: 0.2rem;
+}
 
 .our_story_header {
   color: #ec5242;
-  margin: 2rem 0 0.8rem;
+  margin: 1rem 0 0.8rem;
 }
 
 .our_story_article {
@@ -356,9 +384,12 @@ body {
   padding: 1rem 2rem;
 }
 
-.founder_image {
+.story_image {
   text-align: center;
-  margin: 2rem 0;
+  margin: 3rem auto;
+}
+.story_image_img {
+  margin: 0.3rem 1rem;
 }
 
 .visible {
@@ -366,50 +397,50 @@ body {
   z-index: 5;
 }
 
-footer .partnership {
+.partnership {
   background: #4d4d4d;
   color: #fff;
   padding: 1rem 1rem 2.5rem;
-  margin: 2rem;
+  margin: 2rem 0;
 }
-footer .partnership_heading {
+.partnership_heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 2rem;
 }
-footer .partnership_heading .partnership_underline {
+.partnership_heading .partnership_underline {
   width: 60px;
   height: 1px;
   background: #ec5242;
   margin: 0.4rem 0 1.5rem;
 }
-footer .partnership_img {
+
+.partnership_img {
   display: inline-block;
   margin: 0 0.2rem;
 }
-footer .footer_lists {
-  margin-top: 2rem;
-  padding: 1rem;
-  border-top: 1px solid gray;
+
+.footer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: start;
 }
-footer .footer_lists .footer_list {
-  list-style-type: none;
+.footer_bold {
+  font-weight: bold;
 }
-footer .footer_lists .footer_list_a {
-  color: #595959;
-  display: inline-block;
-  margin: 0 0.5rem;
+.footer_paragraph {
+  padding-left: 1.5rem;
 }
-footer .footer_lists .footer_list_a:hover {
-  transform: scale(1.4);
-  transition: all 1s ease-in-out 0.4s;
+.footer_p {
+  margin-bottom: 0.4rem;
 }
-footer .footer_paragraph {
-  margin-top: -15px;
+
+.main_partner,
+.main_footer {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -515,6 +546,13 @@ footer .footer_paragraph {
     color: #d3d3d3;
     text-transform: uppercase;
   }
+  .welcome_header {
+    max-width: 920px;
+    margin: 10rem auto 0;
+  }
+  .welcome_header .header_paragraph {
+    max-width: 560px;
+  }
   .mobile_instructor {
     display: none;
   }
@@ -543,5 +581,21 @@ footer .footer_paragraph {
   .categories_section .feature_articles {
     grid-template-columns: repeat(4, 1fr);
     padding: 0 2rem;
+  }
+  .main_partner {
+    display: block;
+  }
+  .main_footer {
+    display: flex;
+  }
+  .main_footer .footer_p {
+    margin-bottom: 1rem;
+  }
+  .about_partner {
+    display: none;
+  }
+  .about_footer {
+    background-color: #272a31;
+    color: #fff;
   }
 }/*# sourceMappingURL=main.css.map */
