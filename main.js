@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="instructor_image_top">
             <img
               src="${instructor.image}"
-              alt=""
+              alt="${instructor.name}"
               width="100px"
               height="120px"
             />
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="instructor_image_top">
             <img
               src="${instructor.image}"
-              alt=""
+              alt="${instructor.name}"
               width="100px"
               height="120px"
             />
