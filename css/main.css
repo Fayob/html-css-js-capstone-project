@@ -384,12 +384,40 @@ body {
   padding: 1rem 2rem;
 }
 
-.story_image {
+.story_images {
   text-align: center;
   margin: 3rem auto;
 }
-.story_image_img {
-  margin: 0.3rem 1rem;
+.story_images .story_image {
+  display: inline-block;
+  height: 150px;
+  margin: 0.4rem;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background: #cd2615;
+  overflow: hidden;
+}
+.story_images .story_image_img {
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.4;
+}
+.story_images .story_image_text {
+  position: absolute;
+  max-width: 300px;
+  margin: 0 auto;
+  top: 40px;
+  left: 0;
+  right: 0;
+  color: #fff;
+  line-height: 1.5rem;
+  font-size: 15px;
+  z-index: 2;
+}
+.story_images .story_image_text_p {
+  font-size: 12px;
 }
 
 .visible {
