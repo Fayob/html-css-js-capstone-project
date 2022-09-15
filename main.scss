@@ -459,12 +459,12 @@ body {
     color: #fff;
     background: darken($color: $orange-color, $amount: 15%);
     overflow: hidden;
-    
+
     &_img {
       margin: auto;
-        object-fit: cover;
-        opacity: 0.4;
-      }
+      object-fit: cover;
+      opacity: 0.4;
+    }
 
     &_text {
       position: absolute;
@@ -482,11 +482,7 @@ body {
         font-size: 12px;
       }
     }
-
-    
   }
-
-  
 }
 
 .visible {
